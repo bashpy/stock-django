@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head lang="en">
+<link rel="stylesheet" href="{% static 'css/file.css' %}">
+
+    <meta charset="UTF-8">
+    <title>Hi</title>
+</head>
+<body>
+<table align="center">
+{% for data in datas %}
+
+<tr>
+   <td> {{ data.COMPANY }} </td>
+    <td>{{ data.LTP }}</td>
+    <td>{{ data.Change_I }}</td>
+    <td>{{ data.VOLUME }}</td>
+    <td> {{ data.BUY_PRICE }} </td>
+    <td>{{ data.SELL_PRICE }} </td>
+    <td>{{ data.BUY_QTY }}</td>
+<td>{{ data.SELL_QTY }}</td>
+    <td> {{ data.time }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
